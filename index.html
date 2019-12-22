@@ -23,7 +23,7 @@
             if (!doc.addEventListener) return;
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
-        })(document, window);　
+        })(document, window);
     </script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./animate.css">
@@ -64,6 +64,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="jiiantou" onclick="fullPageJump.clickPage(1)">
                 <img src="./img/1_jiantou.png" alt="">
             </div>
@@ -73,6 +76,7 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
             <div class="content_2">
                 <div class="hourglass">
                     <img src="./img/2_shalou.gif" alt="">
@@ -90,6 +94,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="content_3">
                 <div class="text">
                     <img src="./img/3_wenzi.png" alt="">
@@ -105,6 +112,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="question_box">
                 <div class="question">
                     <img src="./img/4_wenti.png" alt="">
@@ -129,6 +139,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="question_box2">
                 <div class="question">
                     <img src="./img/5_wenti.png" alt="">
@@ -153,6 +166,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="question_box3">
                 <div class="question">
                     <img src="./img/6_wenti.png" alt="">
@@ -177,6 +193,9 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="question_box4">
                 <div class="question">
                     <img src="./img/7_wenti.png" alt="">
@@ -199,6 +218,8 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="wenzi">
                 <img src="./img/8_wenzi.png" alt="">
             </div>
@@ -217,6 +238,8 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="wenzi_1">
                 <img src="./img/9_wenzi_1.png" alt="">
             </div>
@@ -233,6 +256,8 @@
             <div class="logo">
                 <img src="./img/logo.png" alt="">
             </div>
+            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+
             <div class="content_10">
                 <img id="bgBase64" src="./img/11_bg.jpg" style="opacity: 0;" alt="">
                 <div class="content">
@@ -249,6 +274,8 @@
             </div>
         </div>
     </div>
+
+    <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./music.mp3" loop="loop"></audio>
     <script>
         // ios 键盘弹起兼容
         document.getElementById('inputname').addEventListener(
@@ -261,9 +288,6 @@
     </script>
     <script src="./canvas.js"></script>
     <script src="./index.js"></script>
-
-
-
 
     <script>
         //音乐自动播放
@@ -305,6 +329,22 @@
                 media.pause();
             }
         }
+
+        function playPauseAuto() {
+            var imgs = document.getElementsByClassName("audio_img");
+            var media = document.querySelector('#bg-music');
+            if (media.paused) {
+                media.play();
+                for (var i = 0; i < imgs.length; i++) {
+                    imgs[i].childNodes[0].setAttribute("src", "./img/kai.png");
+                }
+            } else {
+                media.pause();
+                for (var i = 0; i < imgs.length; i++) {
+                    imgs[i].childNodes[0].setAttribute("src", "./img/guan.png");
+                }
+            }
+        };
     </script>
 
 </body>

@@ -23,18 +23,34 @@
      display: none;
  }
 
- .logo{
+ .logo {
      position: absolute;
      width: 1rem;
      top: 0.1rem;
-     right: 0.1rem;
+     left: 0.1rem;
      z-index: 999;
      opacity: 0.9;
  }
- .logo img{
+
+ .logo img {
      width: 100%;
      display: block;
  }
+
+ .audio_img {
+     position: absolute;
+     width: 0.3rem;
+     top: 0.06rem;
+     right: 0.06rem;
+     z-index: 999;
+     opacity: 0.9;
+ }
+
+ .audio_img img {
+     width: 100%;
+     display: block;
+ }
+
 
  /* 背景 */
 
@@ -502,8 +518,7 @@
  }
 
 
-
-
-
  /* 最小高度为1000的页面 */
- @media (min-height: 800px) {}
+ @media (min-height: 800px) {
+
+ }
