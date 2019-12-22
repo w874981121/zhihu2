@@ -484,6 +484,8 @@
  .content_10 {
      width: 100%;
      position: relative;
+     overflow: hidden;
+     height: 100%;
  }
 
  .content_10 img {
@@ -491,34 +493,45 @@
      display: block;
  }
 
- .content_10 .content {
+ #bgBase64 {
      position: absolute;
+     top: 0;
+ }
+
+ .content_10 .content {
      width: 100%;
-     height: 1.7rem;
-     bottom: 0;
+     margin-top: 1rem;
+ }
+
+ .content_10 .content #bgBase64png {
+     width: 80%;
+     margin-left: 10%;
+     display: block;
  }
 
  .content_10 .content .wenzi {
      width: 60%;
-     margin: 0 auto;
+     margin: 0.1rem auto;
  }
 
- .content_10 .content .left {
+ .content_10 .left {
      position: absolute;
      width: 35%;
-     top: 0.5rem;
      left: 10%;
+     margin-top: 0.2rem;
  }
 
- .content_10 .content .right {
+ .content_10 .right {
      position: absolute;
      width: 35%;
-     top: 0.5rem;
      right: 10%;
+     margin-top: 0.2rem;
  }
 
 
  /* 最小高度为1000的页面 */
- @media (min-height: 800px) {
-
+ @media screen and (min-height: 812px) and (max-width: 375px) {
+     .content_10 .content {
+         margin-top: 1.6rem;
+     }
  }

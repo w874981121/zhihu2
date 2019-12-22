@@ -65,7 +65,7 @@
                 <img src="./img/logo.png" alt="">
             </div>
 
-            <div class="audio_img" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
+            <div class="audio_img" id="clickMe" onclick="playPauseAuto(this)"><img src="./img/kai.png" alt=""></div>
 
             <div class="jiiantou" onclick="fullPageJump.clickPage(1)">
                 <img src="./img/1_jiantou.png" alt="">
@@ -261,15 +261,16 @@
             <div class="content_10">
                 <img id="bgBase64" src="./img/11_bg.jpg" style="opacity: 0;" alt="">
                 <div class="content">
+                    <img id="bgBase64png" src="" alt="">
                     <div class="wenzi">
                         <img src="./img/10_wenzi.png" alt="">
                     </div>
-                    <div class="left" onclick="rePeek()">
-                        <img src="./img/10_anniu_1.png" alt="">
-                    </div>
-                    <div class="right" onclick="seeShare()">
-                        <img src="./img/10_anniu_2.png" alt="">
-                    </div>
+                </div>
+                <div class="left" onclick="rePeek()">
+                    <img src="./img/10_anniu_1.png" alt="">
+                </div>
+                <div class="right" onclick="seeShare()">
+                    <img src="./img/10_anniu_2.png" alt="">
                 </div>
             </div>
         </div>
@@ -345,6 +346,14 @@
                 }
             }
         };
+
+        // window.onload = function () {
+        //     setTimeout(() => {
+        //         alert(99)
+        //         $("#clickMe").click();
+        //     }, 2000)
+        // }
+
     </script>
 
 </body>

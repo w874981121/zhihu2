@@ -101,7 +101,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-// fullPageJump.clickPage(7)
+fullPageJump.clickPage(3)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -122,7 +122,7 @@ function clickButton() {
     fullPageJump.clickPage(8);
     let RECORD = JSON.parse(localStorage.getItem("RECORD"));
     let obj = [];
-    let path = "/img/answer/"
+    let path = "./img/answer/"
     RECORD.map((item, i) => {
         let rand = Math.floor(Math.random() * 3) + 1;
         obj.push(path + (i - 0 + 1) + `_${item}_${rand}.jpg`)
@@ -134,11 +134,11 @@ function clickButton() {
     })
 
     // 渲染背景图片
-    canvasDrawImg("myCanvas2", "./img/10_bg.jpg", obj, nameText, function (data) {
-        $(".box10").attr("style", `background-image:url(${data})`);
+    canvasDrawImg2("myCanvas2", "./img/10_neirongqu.png", obj, nameText, function (data) {
+        $("#bgBase64png").attr("src", data);
         setTimeout(() => {
             fullPageJump.clickPage(9);
-        }, 5000)
+        }, 2000)
     })
 }
 
