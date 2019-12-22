@@ -16,11 +16,12 @@
      overflow: hidden;
  }
 
-
- #myCanvas{
-     width: 3.75rem;
-     height: 9rem;
+ #myCanvas {
+     position: fixed;
+     left: 10000px;
+     display: none;
  }
+
 
  /* 背景 */
 
@@ -440,7 +441,7 @@
      margin: 0 auto;
      margin-top: 0.2rem;
      display: flex;
-     justify-content:space-around;
+     justify-content: space-around;
  }
 
  .box9 .loading span {
@@ -449,3 +450,14 @@
      background: rgb(209, 150, 135);
      display: block;
  }
+
+ .content_10 {
+     width: 100%;
+ }
+
+ .content_10 img {
+     width: 100%;
+     display: block;
+ }
+
+ .content_10 .content {}

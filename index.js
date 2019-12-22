@@ -1,3 +1,4 @@
+
 /*
 mainClass      滑动父容器类名
 firstClass     第一页的类名
@@ -20,6 +21,7 @@ var startX = 0, //初始横坐标
     startY = 0, //初始纵坐标
     touchFlag = true; //可滑动标志 true 可滑动，false 不可滑
 function fullPage(mainClass, firstClass, num, callback) {
+
     var marginTop = 0, //上下滑动变量
         touchNum = 0, //上滑极限，是否可以上滑
         bodyHeight = document.body.offsetHeight,
@@ -89,6 +91,8 @@ function statePage(val) {
     } else {
         touchFlag = false;
     }
+
+    // location.search = "?" + val
 };
 
 const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
@@ -113,8 +117,19 @@ const clickQuestion = function (num, loc) {
 };
 
 
+let base64Data = null;
+
 function clickButton() {
+    fullPageJump.clickPage(8);
     localStorage.setItem("NAME", $("#inputname").val());
+    canvasDrawImg(function (data) {
+        base64Data = data;
+
+        $("#bgBase64").attr("src",base64Data);
+        setTimeout(() => {
+            fullPageJump.clickPage(9);
+        }, 3000)
+    })
 }
 
 
@@ -128,4 +143,3 @@ function page1_animate() {
 
     // console.log ("ok");
 }
-
