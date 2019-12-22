@@ -101,7 +101,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-fullPageJump.clickPage(7)
+// fullPageJump.clickPage(7)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -130,12 +130,12 @@ function clickButton() {
     })
     obj.splice(Math.floor(Math.random() * 3), 1)
     // 渲染保存图
-    canvasDrawImg("myCanvas", "/img/11_bg.jpg", obj, nameText, function (imgdata) {
+    canvasDrawImg("myCanvas", "./img/11_bg.jpg", obj, nameText, function (imgdata) {
         $("#bgBase64").attr("src", imgdata);
     })
 
     // 渲染背景图片
-    canvasDrawImg("myCanvas2", "/img/10_bg.jpg", obj, nameText, function (data) {
+    canvasDrawImg("myCanvas2", "./img/10_bg.jpg", obj, nameText, function (data) {
         $(".box10").attr("style", `background-image:url(${data})`);
         setTimeout(() => {
             fullPageJump.clickPage(9);
