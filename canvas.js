@@ -46,12 +46,6 @@ function canvasDrawImg(canl, bg, obj, name, callback) {
         }
     }
 
-
-
-
-
-
-
     function drawImg() {
         let base64Img;
         base64Img = canvas.toDataURL('image/jpeg', 1);

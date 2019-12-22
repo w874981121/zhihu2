@@ -452,6 +452,7 @@
      display: block;
  }
 
+ /* box10 */
  .content_10 {
      width: 100%;
      position: relative;
@@ -492,8 +493,5 @@
 
 
 
-
-/* 最小高度为1000的页面 */
- @media (min-device-height: 1000px) {
-    .box{ height: 100px;width: 100px; background-color: pink;}       
-}
+ /* 最小高度为1000的页面 */
+ @media (min-height: 800px) {}
