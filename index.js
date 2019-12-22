@@ -160,15 +160,15 @@ function seeShare() {
 //
 function clickSwitch(num) {
     switch (num) {
-        case 2:
-            page2_animate()
-            break;
-        case 3:
-            page3_animate()
-            break;
-        case 8:
-            page8_animate()
-            break;
+        case 2:page2_animate();break;
+        case 3:page3_animate();break;
+        case 4:page4_animate();break;
+        case 5:page5_animate();break;  
+        case 6:page6_animate();break;
+        case 7:page7_animate();break;
+        case 8:page8_animate();break;
+        case 9:page9_animate();break;
+        case 10:page10_animate();break;
     }
 };
 
@@ -178,106 +178,84 @@ page1_animate();
 // 页面1动画效果
 function page1_animate() {
     $(".box1 .jiiantou img").addClass("animated fadeInDown infinite");
-    $(".box1 .jiiantou img").css({
-        "animation-duration": "2s"
-    });
+    $(".box1 .jiiantou img").css({"animation-duration": "2s"});
 }
-
 // 页面2动画效果
 function page2_animate() {
     $(".box2 .text img").addClass("animated fadeIn");
-    $(".box2 .text img").css({
-        "animation-duration": "4s"
-    });
+    $(".box2 .text img").css({"animation-duration":"4s","-webkit-animation-delay":"0.5s","animation-delay":"0.5s"});
     $(".box2 .jiiantou img").addClass("animated fadeInDown infinite");
-    $(".box2 .jiiantou img").css({
-        "animation-duration": "2s"
-    });
+    $(".box2 .jiiantou img").css({"animation-duration":"2s","-webkit-animation-delay":"0.5s","animation-delay":"0.5s"});
 }
-
 // 页面3动画效果
 function page3_animate() {
     $(".box3 .text img").addClass("animated fadeIn");
-    $(".box3 .text img").css({
-        "animation-duration": "4s"
-    });
+    $(".box3 .text img").css({"animation-duration": "4s","-webkit-animation-delay":"0.5s","animation-delay":"0.5s"});
     $(".box3 .button img").addClass("animated fadeIn");
-    $(".box3 .button img").css({
-        "-webkit-animation-delay": "2s",
-        "animation-delay": "2s"
-    });
-
+    $(".box3 .button img").css({"-webkit-animation-delay": "2s","animation-delay": "2s"});
 }
-
 // 页面4动画效果
 function page4_animate() {
     $(".box4 .question img").addClass("animated bounceIn");
     $(".box4 .question_a img").addClass("animated flipInY");
-    $(".box4 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box4 .question_a img").css({"-webkit-animation-delay":"1.1s","animation-delay":"1.1s"});
     $(".box4 .question_b img").addClass("animated flipInY");
-    $(".box4 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box4 .question_b img").css({"-webkit-animation-delay":"1.2s","animation-delay":"1.2s"});
     $(".box4 .question_c img").addClass("animated flipInY");
-    $(".box4 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box4 .question_c img").css({"-webkit-animation-delay":"1.3s","animation-delay":"1.3s"});
     $(".box4 .question_d img").addClass("animated flipInY");
-    $(".box4 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
+    $(".box4 .question_d img").css({"-webkit-animation-delay":"1.4s","animation-delay":"1.4s"});
 }
-
 // 页面5动画效果
 function page5_animate() {
     $(".box5 .question img").addClass("animated bounceIn");
     $(".box5 .question_a img").addClass("animated flipInY");
-    $(".box5 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box5 .question_a img").css({"-webkit-animation-delay":"1.1s","animation-delay":"1.1s"});
     $(".box5 .question_b img").addClass("animated flipInY");
-    $(".box5 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box5 .question_b img").css({"-webkit-animation-delay":"1.2s","animation-delay":"1.2s"});
     $(".box5 .question_c img").addClass("animated flipInY");
-    $(".box5 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box5 .question_c img").css({"-webkit-animation-delay":"1.3s","animation-delay":"1.3s"});
     $(".box5 .question_d img").addClass("animated flipInY");
-    $(".box5 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
+    $(".box5 .question_d img").css({"-webkit-animation-delay":"1.4s","animation-delay":"1.4s"});
 }
-
 // 页面6动画效果
 function page6_animate() {
     $(".box6 .question img").addClass("animated bounceIn");
     $(".box6 .question_a img").addClass("animated flipInY");
-    $(".box6 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box6 .question_a img").css({"-webkit-animation-delay":"1.1s","animation-delay":"1.1s"});
     $(".box6 .question_b img").addClass("animated flipInY");
-    $(".box6 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box6 .question_b img").css({"-webkit-animation-delay":"1.2s","animation-delay":"1.2s"});
     $(".box6 .question_c img").addClass("animated flipInY");
-    $(".box6 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box6 .question_c img").css({"-webkit-animation-delay":"1.3s","animation-delay":"1.3s"});
     $(".box6 .question_d img").addClass("animated flipInY");
-    $(".box6 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
+    $(".box6 .question_d img").css({"-webkit-animation-delay":"1.4s","animation-delay":"1.4s"});
 }
-
 // 页面7动画效果
 function page7_animate() {
     $(".box7 .question img").addClass("animated bounceIn");
     $(".box7 .question_a img").addClass("animated flipInY");
-    $(".box7 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box7 .question_a img").css({"-webkit-animation-delay":"1.1s","animation-delay":"1.1s"});
     $(".box7 .question_b img").addClass("animated flipInY");
-    $(".box7 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box7 .question_b img").css({"-webkit-animation-delay":"1.2s","animation-delay":"1.2s"});
     $(".box7 .question_c img").addClass("animated flipInY");
-    $(".box7 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box7 .question_c img").css({"-webkit-animation-delay":"1.3s","animation-delay":"1.3s"});
     $(".box7 .question_d img").addClass("animated flipInY");
-    $(".box7 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
+    $(".box7 .question_d img").css({"-webkit-animation-delay":"1.4s","animation-delay":"1.4s"});
 }
-
 // 页面8动画效果
 function page8_animate() {
     $(".box8 .wenzi img").addClass("animated fadeIn");
-    $(".box8 .wenzi img").css({
-        "animation-duration": "3s"
-    });
-
-
-    $(".box8 .qipao img").addClass("animated fadeIn");
-    $(".box8 .qipao img").css({
-        "animation-duration": "4s"
-    });
+    $(".box8 .wenzi img").css({"animation-duration":"4s","-webkit-animation-delay":"0.5s","animation-delay":"0.5s"});
+    $(".box8 .shurukuang input").addClass("animated fadeIn");
+    $(".box8 .shurukuang input").css({"animation-duration":"4s","-webkit-animation-delay":"2s","animation-delay":"2s"});
+    $(".box8 .anniu img").addClass("animated fadeIn");
+    $(".box8 .anniu img").css({"animation-duration":"4s","-webkit-animation-delay":"3.5s","animation-delay":"3.5s"});
+    //气泡效果带完善
 }
 
 // 页面9动画效果
 function page9_animate() {
-
+    $(".box9 .wenzi_1 img").addClass("animated fadeIn");
 }
 
 // 页面10动画效果
