@@ -101,7 +101,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-fullPageJump.clickPage(7)
+// fullPageJump.clickPage(0)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -197,7 +197,7 @@ function clickSwitch(num) {
 $("#inputname").focus(function () {
     $(".box8 .qipao img").addClass("animated fadeIn");
     $(".box8 .qipao img").css({
-        "animation-duration": "4s",
+        "animation-duration": "2s",
         "-webkit-animation-delay": "0.5s",
         "animation-delay": "0.5s"
     });
