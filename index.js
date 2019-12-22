@@ -122,7 +122,7 @@ function clickButton() {
     fullPageJump.clickPage(8);
     let RECORD = JSON.parse(localStorage.getItem("RECORD"));
     let obj = [];
-    let path = "/img/answer/"
+    let path = "./img/answer/"
     RECORD.map((item, i) => {
         let rand = Math.floor(Math.random() * 3) + 1;
         obj.push(path + (i - 0 + 1) + `_${item}_${rand}.jpg`)
