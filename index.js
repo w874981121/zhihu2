@@ -135,11 +135,65 @@ function clickButton() {
 
 // 动画控制台模块
 // 说明：在页面滑入时调用响应的动画模块即可
+// 循环执行动画 infinite
+// 动画执行时长 "animation-duration":"2s"
+// 动画延时执行 "-webkit-animation-delay":"0.5s"   "animation-delay":"0.5s"
+//
 
 // 页面1动画效果
 function page1_animate() {
-    $(".box1 .jiiantou img").toggleClass("animated fadeInUp infinite");
+    $(".box1 .jiiantou img").addClass("animated fadeInDown infinite");
     $(".box1 .jiiantou img").css({"animation-duration":"2s"});
+}
 
-    // console.log ("ok");
+// 页面2动画效果
+function page2_animate() {
+    $(".box2 .text img").addClass("animated fadeIn");
+    $(".box2 .text img").css({"animation-duration":"4s"});
+    $(".box2 .jiiantou img").addClass("animated fadeInDown infinite");
+    $(".box2 .jiiantou img").css({"animation-duration":"2s"});
+}
+
+// 页面3动画效果
+function page3_animate() {
+    $(".box3 .text img").addClass("animated fadeIn");
+    $(".box3 .text img").css({"animation-duration":"4s"});
+    $(".box3 .button img").addClass("animated fadeIn");
+    $(".box3 .button img").css({"-webkit-animation-delay":"2s","animation-delay":"2s"});
+
+}
+
+// 页面4动画效果
+function page4_animate() {
+
+}
+
+// 页面5动画效果
+function page5_animate() {
+
+}
+
+// 页面6动画效果
+function page6_animate() {
+
+}
+
+// 页面7动画效果
+function page7_animate() {
+
+}
+
+// 页面8动画效果
+function page8_animate() {
+
+}
+
+// 页面9动画效果
+function page9_animate() {
+
+}
+
+// 页面10动画效果
+function page10_animate() {
+
 }
