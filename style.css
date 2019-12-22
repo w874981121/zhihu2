@@ -1,0 +1,445 @@
+ html {
+     font-size: 100px;
+ }
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+ .active_page {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+ }
+
+ /* 背景 */
+
+
+
+ .box1 {
+     background-image: url("./img/1_bg.jpg");
+ }
+
+ .box2 {
+     background-image: url("./img/2_bg.jpg");
+ }
+
+ .box3 {
+     background-image: url("./img/3_bg.jpg");
+ }
+
+ .box4 {
+     background-image: url("./img/4_bg.jpg");
+ }
+
+ .box5 {
+     background-image: url("./img/5_bg.jpg");
+ }
+
+ .box6 {
+     background-image: url("./img/6_bg.jpg");
+ }
+
+ .box7 {
+     background-image: url("./img/7_bg.jpg");
+ }
+
+ .box8 {
+     background-image: url("./img/8_bg.jpg");
+ }
+
+ .box9 {
+     background-image: url("./img/9_bg.jpg");
+ }
+
+ .box10 {
+     background-image: url("./img/10_bg.jpg");
+ }
+
+ .box11 {
+     background-image: url("./img/11_bg.jpg");
+
+ }
+
+ .page {
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     transition: 0.5s ease-in;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     overflow: hidden;
+     position: relative;
+ }
+
+ /* page1 */
+ .jiiantou {
+     position: absolute;
+     bottom: 0.6rem;
+     width: 100%;
+     height: 0.38rem;
+ }
+
+ .jiiantou img {
+     height: 100%;
+     display: block;
+     margin: 0 auto;
+     ;
+ }
+
+ /* page2 */
+ .content_2 {
+     margin-top: 1.6rem;
+     overflow: hidden;
+ }
+
+ .content_2 .hourglass {
+     width: 100%;
+     height: 0.8rem;
+ }
+
+ .content_2 .hourglass img {
+     height: 100%;
+     display: block;
+     margin: 0 auto;
+ }
+
+ .content_2 .text {
+     width: 85%;
+     margin: 0.5rem auto;
+ }
+
+ .content_2 .text img {
+     width: 100%;
+     display: block;
+ }
+
+ /* page3 */
+ .content_3 {
+     margin-top: 1rem;
+     overflow: hidden;
+ }
+
+ .content_3 .text {
+     width: 80%;
+     margin: 0.2rem auto;
+ }
+
+ .content_3 .text img {
+     width: 100%;
+     display: block;
+ }
+
+ .content_3 .button {
+     width: 100%;
+     height: 0.46rem;
+     margin-top: 0.4rem;
+ }
+
+ .content_3 .button img {
+     height: 100%;
+     display: block;
+     margin: 0 auto;
+ }
+
+
+ /* 问题1 板块  page4*/
+ .question_box {
+     width: 80%;
+     margin: 1.2rem auto;
+ }
+
+ .question_box img {
+     height: 100%;
+     display: block;
+ }
+
+ .question_box .question img {
+     width: 100%;
+     height: auto;
+ }
+
+ .question_box .question_a,
+ .question_box .question_b,
+ .question_box .question_c,
+ .question_box .question_d {
+     height: 0.45rem;
+ }
+
+ .question_box .question_a {
+     margin-top: 1rem;
+     margin-left: 0.3rem;
+ }
+
+ .question_box .question_b {
+     margin-top: 0.2rem;
+     margin-left: 0.9rem;
+ }
+
+ .question_box .question_c {
+     margin-top: 0.2rem;
+     margin-left: 1.5rem;
+
+ }
+
+ .question_box .question_d {
+     margin-top: 0.2rem;
+     margin-left: 0.7rem;
+ }
+
+ /* 问题2 板块  page5*/
+ .question_box2 {
+     width: 80%;
+     margin: 1.2rem auto;
+     position: relative;
+ }
+
+ .question_box2 img {
+     width: 100%;
+     display: block;
+ }
+
+ .question_box2 .question_a,
+ .question_box2 .question_b,
+ .question_box2 .question_c,
+ .question_box2 .question_d {
+     width: 35%;
+     position: absolute;
+ }
+
+ .question_box2 .question_a {
+     margin-top: 0.6rem;
+     margin-left: 6%;
+ }
+
+ .question_box2 .question_b {
+     margin-top: 1.1rem;
+     margin-left: 60%;
+ }
+
+ .question_box2 .question_c {
+     margin-top: 2.2rem;
+     margin-left: 6%;
+
+ }
+
+ .question_box2 .question_d {
+     margin-top: 2.7rem;
+     margin-left: 60%;
+ }
+
+ /* 问题3 板块  page6*/
+
+ .question_box3 {
+     width: 80%;
+     margin: 1.2rem auto;
+ }
+
+ .question_box3 img {
+     height: 100%;
+     display: block;
+ }
+
+ .question_box3 .question img {
+     width: 100%;
+     height: auto;
+ }
+
+ .question_box3 .question_a,
+ .question_box3 .question_b,
+ .question_box3 .question_c,
+ .question_box3 .question_d {
+     height: 0.45rem;
+ }
+
+ .question_box3 .question_a {
+     margin-top: 0.7rem;
+     margin-left: 2%;
+ }
+
+ .question_box3 .question_b {
+     margin-top: 0.2rem;
+     margin-left: 0.9rem;
+ }
+
+ .question_box3 .question_c {
+     margin-top: 0.2rem;
+     margin-left: 2%;
+
+ }
+
+ .question_box3 .question_d {
+     margin-top: 0.2rem;
+     margin-left: 1.2rem;
+ }
+
+ /* 问题4 板块 page7*/
+ .question_box4 {
+     width: 80%;
+     margin: 1.2rem auto;
+ }
+
+ .question_box4 img {
+     height: 100%;
+     display: block;
+ }
+
+ .question_box4 .question img {
+     width: 100%;
+     height: auto;
+ }
+
+ .question_box4 .question_a,
+ .question_box4 .question_b,
+ .question_box4 .question_c,
+ .question_box4 .question_d {
+     height: 0.45rem;
+ }
+
+ .question_box4 .question_a {
+     margin-top: 0.6rem;
+ }
+
+ .question_box4 .question_a img {
+     margin: 0 auto;
+ }
+
+ .question_box4 .question_b {
+     margin-top: 0.3rem;
+     margin-left: 0.1rem;
+ }
+
+ .question_box4 .question_c {
+     margin-top: 0.3rem;
+     margin-left: 0.8rem;
+
+ }
+
+ .question_box4 .question_d {
+     margin-top: 0.3rem;
+     margin-left: 0.4rem;
+ }
+
+ /*BOX8*/
+ .box8 .wenzi {
+     width: 85%;
+     margin: 0 auto;
+     margin-top: 1.2rem;
+
+ }
+
+ .box8 .wenzi img {
+     width: 100%;
+     display: block;
+ }
+
+ .box8 .shurukuang {
+     width: 100%;
+     text-align: center;
+     font-size: 0;
+     margin-top: -0.1rem;
+ }
+
+
+ .box8 .shurukuang input {
+     width: 70%;
+     padding: 0 0.1rem;
+     height: 0.5rem;
+     background: url(./img/8_shurukuang.png) no-repeat 100%;
+     background-size: 100% 100%;
+     color: #fff;
+     font-size: 0.2rem;
+     text-indent: 0.2rem;
+     border: none;
+     display: inline-block;
+     outline: none;
+ }
+
+ :-moz-placeholder {
+     /* Mozilla Firefox 4 to 18 */
+     color: #eee;
+ }
+
+ ::-moz-placeholder {
+     /* Mozilla Firefox 19+ */
+     color: #eee;
+ }
+
+ input:-ms-input-placeholder,
+ textarea:-ms-input-placeholder {
+     color: #eee;
+ }
+
+ input::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder {
+     color: #eee;
+ }
+
+ .box8 .anniu {
+     width: 100%;
+     height: 0.5rem;
+     text-align: center;
+     margin-top: 0.8rem;
+ }
+
+ .box8 .anniu img {
+     height: 100%;
+     display: block;
+     margin: 0 auto;
+ }
+
+ .box8 .qipao {
+     width: 60%;
+     margin-left: 1rem;
+     margin-top: 0.3rem;
+     position: relative;
+ }
+
+ .box8 .qipao img {
+     width: 100%;
+     display: block;
+ }
+
+
+ /*BOX9*/
+
+ .box9 .wenzi_1 {
+     width: 60%;
+     margin: 0 auto;
+     margin-top: 1.8rem;
+     text-align: center;
+
+ }
+
+ .box9 img {
+     width: 100%;
+     display: block;
+ }
+
+ .box9 .wenzi_2 {
+     width: 50%;
+     text-align: center;
+     margin: 0 auto;
+     margin-top: 1rem;
+ }
+
+ .box9 .loading {
+     width: 0.4rem;
+     height: 0.04rem;
+     margin: 0 auto;
+     margin-top: 0.2rem;
+     display: flex;
+     justify-content:space-around;
+ }
+
+ .box9 .loading span {
+     width: 0.04rem;
+     height: 0.04rem;
+     background: rgb(209, 150, 135);
+     display: block;
+ }
