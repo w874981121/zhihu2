@@ -1,0 +1,16 @@
+.DS_Store
+npm-debug.log
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+.idea/
+.vscode/
+#build/dev-server.js
+.tags
+.tags1
+cert/
+build/local.conf.js
+.nvmrc
+dist/
+node_modules/
+temp/
