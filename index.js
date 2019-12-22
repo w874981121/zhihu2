@@ -160,7 +160,6 @@ function page3_animate() {
     $(".box3 .text img").css({"animation-duration":"4s"});
     $(".box3 .button img").addClass("animated fadeIn");
     $(".box3 .button img").css({"-webkit-animation-delay":"2s","animation-delay":"2s"});
-
 }
 
 // 页面4动画效果
