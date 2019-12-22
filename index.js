@@ -1,3 +1,4 @@
+
 /*
              mainClass      滑动父容器类名
              firstClass  第一页的类名
@@ -91,7 +92,7 @@ function statePage(val) {
         touchFlag = false;
     }
 
-    location.search = "?" + val
+    // location.search = "?" + val
 };
 
 const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
@@ -115,7 +116,17 @@ const clickQuestion = function (num, loc) {
     statePage(Number(num) + 4)
 };
 
+let base64Data = null;
 
 function clickButton() {
+    fullPageJump.clickPage(8);
     localStorage.setItem("NAME", $("#inputname").val());
+    canvasDrawImg(function (data) {
+        base64Data = data;
+
+        $("#bgBase64").attr("src",base64Data);
+        setTimeout(() => {
+            fullPageJump.clickPage(9);
+        }, 3000)
+    })
 }

@@ -2,16 +2,15 @@ var gulp = require('gulp');
 
 var connect = require('gulp-connect');
 
-gulp.tack('webserver', function () {
-
+gulp.task('webserver', function () {
     connect.server({
-
+        host:"0.0.0.0",
         livereload: true,
-
+        directoryListing: true,
+        open: true,
         port: 8088
 
     });
-
 });
 
-gulp.tack('default', ['webserver']);
+gulp.task('default', gulp.series(gulp.parallel('webserver')));
