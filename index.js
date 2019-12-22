@@ -1,4 +1,3 @@
-
 /*
 mainClass      滑动父容器类名
 firstClass     第一页的类名
@@ -27,7 +26,6 @@ function fullPage(mainClass, firstClass, num, callback) {
         bodyHeight = document.body.offsetHeight,
         page = document.getElementsByClassName(mainClass)[0],
         pageFirst = document.getElementsByClassName(firstClass)[0];
-
     var fn1 = function (e) {
             // e.preventDefault();
             startX = e.targetTouches[0].clientX;
@@ -96,14 +94,12 @@ function statePage(val) {
 };
 
 const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
+    clickSwitch(val + 2)
     statePage(val)
 });
 
-
 // 默认开启第几行
-fullPageJump.clickPage(0)
-
-
+// fullPageJump.clickPage(7)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -117,21 +113,44 @@ const clickQuestion = function (num, loc) {
 };
 
 
-let base64Data = null;
-
 function clickButton() {
+    let nameText = $("#inputname").val()
+    if (!nameText) {
+        return alert("请输入名字")
+    }
     fullPageJump.clickPage(8);
-    localStorage.setItem("NAME", $("#inputname").val());
-    canvasDrawImg(function (data) {
-        base64Data = data;
+    let RECORD = JSON.parse(localStorage.getItem("RECORD"));
+    let obj = [];
+    let path = "/img/answer/"
+    RECORD.map((item, i) => {
+        let rand = Math.floor(Math.random() * 3) + 1;
+        obj.push(path + (i - 0 + 1) + `_${item}_${rand}.jpg`)
+    })
+    obj.splice(Math.floor(Math.random() * 3), 1)
+    // 渲染保存图
+    canvasDrawImg("myCanvas", "/img/11_bg.jpg", obj, nameText, function (imgdata) {
+        $("#bgBase64").attr("src", imgdata);
+    })
 
-        $("#bgBase64").attr("src",base64Data);
+    // 渲染背景图片
+    canvasDrawImg("myCanvas2", "/img/10_bg.jpg", obj, nameText, function (data) {
+        $(".box10").attr("style", `background-image:url(${data})`);
         setTimeout(() => {
             fullPageJump.clickPage(9);
-        }, 3000)
+        }, 1000)
     })
 }
 
+
+// 重新偷看
+function rePeek() {
+    fullPageJump.clickPage(3);
+}
+
+// 让它查看
+function seeShare() {
+    alert("分享")
+}
 
 // 动画控制台模块
 // 说明：在页面滑入时调用响应的动画模块即可
@@ -139,27 +158,54 @@ function clickButton() {
 // 动画执行时长 "animation-duration":"2s"
 // 动画延时执行 "-webkit-animation-delay":"0.5s"   "animation-delay":"0.5s"
 //
+function clickSwitch(num) {
+    switch (num) {
+        case 2:
+            page2_animate()
+            break;
+        case 3:
+            page3_animate()
+            break;
+        case 8:
+            page8_animate()
+            break;
+    }
+};
+
+// 首页默认执行
+page1_animate();
 
 // 页面1动画效果
 function page1_animate() {
     $(".box1 .jiiantou img").addClass("animated fadeInDown infinite");
-    $(".box1 .jiiantou img").css({"animation-duration":"2s"});
+    $(".box1 .jiiantou img").css({
+        "animation-duration": "2s"
+    });
 }
 
 // 页面2动画效果
 function page2_animate() {
     $(".box2 .text img").addClass("animated fadeIn");
-    $(".box2 .text img").css({"animation-duration":"4s"});
+    $(".box2 .text img").css({
+        "animation-duration": "4s"
+    });
     $(".box2 .jiiantou img").addClass("animated fadeInDown infinite");
-    $(".box2 .jiiantou img").css({"animation-duration":"2s"});
+    $(".box2 .jiiantou img").css({
+        "animation-duration": "2s"
+    });
 }
 
 // 页面3动画效果
 function page3_animate() {
     $(".box3 .text img").addClass("animated fadeIn");
-    $(".box3 .text img").css({"animation-duration":"4s"});
+    $(".box3 .text img").css({
+        "animation-duration": "4s"
+    });
     $(".box3 .button img").addClass("animated fadeIn");
-    $(".box3 .button img").css({"-webkit-animation-delay":"2s","animation-delay":"2s"});
+    $(".box3 .button img").css({
+        "-webkit-animation-delay": "2s",
+        "animation-delay": "2s"
+    });
 
 }
 
@@ -185,7 +231,16 @@ function page7_animate() {
 
 // 页面8动画效果
 function page8_animate() {
+    $(".box8 .wenzi img").addClass("animated fadeIn");
+    $(".box8 .wenzi img").css({
+        "animation-duration": "3s"
+    });
 
+
+    $(".box8 .qipao img").addClass("animated fadeIn");
+    $(".box8 .qipao img").css({
+        "animation-duration": "4s"
+    });
 }
 
 // 页面9动画效果

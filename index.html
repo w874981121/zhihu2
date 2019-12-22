@@ -23,7 +23,7 @@
             if (!doc.addEventListener) return;
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
-        })(document, window);
+        })(document, window);　
     </script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./animate.css">
@@ -35,7 +35,7 @@
 
 <body>
     <canvas id="myCanvas"></canvas>
-
+    <canvas id="myCanvas2"></canvas>
     <div class="active_page">
         <div class="page box1 f-pageFirst">
             <div onclick="page1_animate()" style="font-size: 12px;">动画触发测试</div>
@@ -184,13 +184,31 @@
         </div>
         <div class="page box10">
             <div class="content_10">
-                <img id="bgBase64" src="./img/11_bg.jpg" alt="">
+                <img id="bgBase64" src="./img/11_bg.jpg" style="opacity: 0;" alt="">
                 <div class="content">
-
+                    <div class="wenzi">
+                        <img src="./img/10_wenzi.png" alt="">
+                    </div>
+                    <div class="left" onclick="rePeek()">
+                        <img src="./img/10_anniu_1.png" alt="">
+                    </div>
+                    <div class="right" onclick="seeShare()">
+                        <img src="./img/10_anniu_2.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        // ios 键盘弹起兼容
+        document.getElementById('inputname').addEventListener(
+            'blur',
+            function () {
+                window.scrollTo(0, 0) //页面滚动到顶部
+            },
+            false
+        );
+    </script>
     <script src="./canvas.js"></script>
     <script src="./index.js"></script>
 </body>

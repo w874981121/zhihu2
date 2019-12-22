@@ -1,13 +1,13 @@
 //创建一个画布
 
-function canvasDrawImg(callback) {
+function canvasDrawImg(canl, bg, obj, name, callback) {
     const width = 750;
-    const heigth = 1350;
-    let canvas = document.getElementById("myCanvas");
+    const height = 1350;
+    let canvas = document.getElementById(canl);
     canvas.width = width;
-    canvas.height = heigth;
+    canvas.height = height;
     let ctx = canvas.getContext("2d");
-    let bgimgurl = './img/11_bg.jpg';
+    let bgimgurl = bg;
     let img_bg = new Image()
     img_bg.setAttribute("crossOrigin", 'anonymous')
     img_bg.src = bgimgurl;
@@ -22,40 +22,41 @@ function canvasDrawImg(callback) {
         // 设置垂直对齐方式
         ctx.textBaseline = "middle";
         // 绘制文字（参数：要写的字，x坐标，y坐标）
-        ctx.fillText("王延琦", 178, 380);
-        drawImg()
-    }
-
-    let img_1 = new Image();
-    img_1.setAttribute("crossOrigin", 'anonymous')
-    img_1.src = "./img/answer/1_a_1.jpg"
-    img_1.onload = function () {
-        ctx.drawImage(img_1, 106, 510, img_1.width, img_1.height)
-        drawImg()
-    }
-
-    let img_2 = new Image();
-    img_2.setAttribute("crossOrigin", 'anonymous')
-    img_2.src = "./img/answer/1_a_1.jpg"
-    img_2.onload = function () {
-        ctx.drawImage(img_2, 106, 660, img_2.width, img_2.height)
-        drawImg()
-    }
-
-    let img_3 = new Image();
-    img_3.setAttribute("crossOrigin", 'anonymous')
-    img_3.src = "./img/answer/1_a_2.jpg"
-    img_3.onload = function () {
-        ctx.drawImage(img_3, 106, 810, img_3.width, img_3.height)
-        drawImg()
-    }
-    let stateImg = 0;
-    function drawImg() {
-        stateImg++
-        if (stateImg == 4) {
-            let base64Img;
-            base64Img = canvas.toDataURL('image/jpeg');
-            callback(base64Img)
+        ctx.fillText(name, 178, 380);
+        const Qingwidth = 570,
+            Qingheight = 120;
+        let img_1 = new Image();
+        img_1.setAttribute("crossOrigin", 'anonymous')
+        img_1.src = obj[0];
+        img_1.onload = function () {
+            ctx.drawImage(img_1, 90, 500, Qingwidth, Qingheight)
+            let img_2 = new Image();
+            img_2.setAttribute("crossOrigin", 'anonymous')
+            img_2.src = obj[1];
+            img_2.onload = function () {
+                ctx.drawImage(img_2, 90, 660, Qingwidth, Qingheight)
+                let img_3 = new Image();
+                img_3.setAttribute("crossOrigin", 'anonymous')
+                img_3.src = obj[2];
+                img_3.onload = function () {
+                    ctx.drawImage(img_3, 90, 820, Qingwidth, Qingheight)
+                    drawImg()
+                }
+            }
         }
+    }
+
+
+
+
+
+
+
+    function drawImg() {
+        let base64Img;
+        base64Img = canvas.toDataURL('image/jpeg', 1);
+        canvas.width = 0;
+        canvas.height = 0;
+        callback(base64Img)
     }
 }
