@@ -4,15 +4,16 @@
 const width = 750;
 const heigth = 1350;
 
-const canvas = document.getElementById("myCanvas");
+let canvas = document.getElementById("myCanvas");
 canvas.width = width;
 canvas.height = heigth;
 let ctx = canvas.getContext("2d");
 let bgimgurl = './img/11_bg.jpg';
-let base64Img = null;
+
 
 let img = new Image()
 img.src = bgimgurl;
+// img.setAttribute("crossOrigin", 'Anonymous')
 img.onload = function () {
     ctx.drawImage(img, 0, 0, img.width, img.height)
     // 设置字体
@@ -25,9 +26,7 @@ img.onload = function () {
     ctx.textBaseline = "middle";
     // 绘制文字（参数：要写的字，x坐标，y坐标）
     ctx.fillText("王延琦", 178, 380);
-
-    base64Img = ctx.toDataURL('image/jpeg');
-
-    console.log(base64Img)
-    
 }
+let base64Img;
+base64Img = canvas.toDataURL('image/jpeg');
+console.log(base64Img)
