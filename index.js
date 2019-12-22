@@ -114,7 +114,6 @@ const clickQuestion = function (num, loc) {
     statePage(Number(num) + 4)
 };
 
-
 function clickButton() {
     let nameText = $("#inputname").val()
     if (!nameText) {
@@ -197,7 +196,7 @@ function clickSwitch(num) {
 $("#inputname").focus(function () {
     $(".box8 .qipao img").addClass("animated fadeIn");
     $(".box8 .qipao img").css({
-        "animation-duration": "4s",
+        "animation-duration": "2s",
         "-webkit-animation-delay": "0.5s",
         "animation-delay": "0.5s"
     });

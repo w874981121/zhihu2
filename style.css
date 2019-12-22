@@ -487,3 +487,13 @@
      top: 0.5rem;
      right: 10%;
  }
+
+
+
+
+
+
+/* 最小高度为1000的页面 */
+ @media (min-device-height: 1000px) {
+    .box{ height: 100px;width: 100px; background-color: pink;}       
+}
