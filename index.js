@@ -164,22 +164,54 @@ function page3_animate() {
 
 // 页面4动画效果
 function page4_animate() {
-
+    $(".box4 .question img").addClass("animated bounceIn");
+    $(".box4 .question_a img").addClass("animated flipInY");
+    $(".box4 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box4 .question_b img").addClass("animated flipInY");
+    $(".box4 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box4 .question_c img").addClass("animated flipInY");
+    $(".box4 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box4 .question_d img").addClass("animated flipInY");
+    $(".box4 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
 }
 
 // 页面5动画效果
 function page5_animate() {
-
+    $(".box5 .question img").addClass("animated bounceIn");
+    $(".box5 .question_a img").addClass("animated flipInY");
+    $(".box5 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box5 .question_b img").addClass("animated flipInY");
+    $(".box5 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box5 .question_c img").addClass("animated flipInY");
+    $(".box5 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box5 .question_d img").addClass("animated flipInY");
+    $(".box5 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
 }
 
 // 页面6动画效果
 function page6_animate() {
-
+    $(".box6 .question img").addClass("animated bounceIn");
+    $(".box6 .question_a img").addClass("animated flipInY");
+    $(".box6 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box6 .question_b img").addClass("animated flipInY");
+    $(".box6 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box6 .question_c img").addClass("animated flipInY");
+    $(".box6 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box6 .question_d img").addClass("animated flipInY");
+    $(".box6 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
 }
 
 // 页面7动画效果
 function page7_animate() {
-
+    $(".box7 .question img").addClass("animated bounceIn");
+    $(".box7 .question_a img").addClass("animated flipInY");
+    $(".box7 .question_a img").css({"-webkit-animation-delay":"0.1s","animation-delay":"0.1s"});
+    $(".box7 .question_b img").addClass("animated flipInY");
+    $(".box7 .question_b img").css({"-webkit-animation-delay":"0.2s","animation-delay":"0.2s"});
+    $(".box7 .question_c img").addClass("animated flipInY");
+    $(".box7 .question_c img").css({"-webkit-animation-delay":"0.3s","animation-delay":"0.3s"});
+    $(".box7 .question_d img").addClass("animated flipInY");
+    $(".box7 .question_d img").css({"-webkit-animation-delay":"0.4s","animation-delay":"0.4s"});
 }
 
 // 页面8动画效果
