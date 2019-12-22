@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=375,user-scalable=no">
     <link rel="icon" href="./favicon.ico">
-    <title>知乎</title>
+    <title>致 2020 的你</title>
     <script>
         //兼容同比
         (function (doc, win) {
@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./animate.css">
     <script src="./zeptojs.min.js"></script>
-    <!-- <script async src="https://unpkg.zhihu.com/zhihu-hybrid@2.3.1"></script>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script> -->
     <script src="https://zhstatic.zhihu.com/zWechat/zWechat.9b83b2d673c0bdd49070.js"></script>
     <script>
         var shareInfo = {
@@ -53,14 +51,12 @@
     <canvas id="myCanvas2"></canvas>
     <div class="active_page">
         <div class="page box1 f-pageFirst">
-            <div onclick="page1_animate()" style="font-size: 12px;">动画触发测试</div>
             <div class="jiiantou" onclick="fullPageJump.clickPage(1)">
                 <img src="./img/1_jiantou.png" alt="">
             </div>
         </div>
         <!-- page2 -->
         <div class="page box2">
-            <div onclick="page2_animate()" style="font-size: 12px;">动画触发测试</div>
             <div class="content_2">
                 <div class="hourglass">
                     <img src="./img/2_shalou.gif" alt="">
@@ -75,7 +71,6 @@
         </div>
         <!-- page3 -->
         <div class="page box3">
-            <div onclick="page3_animate()" style="font-size: 12px;">动画触发测试</div>
             <div class="content_3">
                 <div class="text">
                     <img src="./img/3_wenzi.png" alt="">
@@ -92,17 +87,17 @@
                 <div class="question">
                     <img src="./img/4_wenti.png" alt="">
                 </div>
-                <div class="question_a" onclick="clickQuestion(0,'a')">
-                    <img src="./img/4_a.png" alt="">
+                <div class="question_a" >
+                    <img src="./img/4_a.png" onclick="clickQuestion(0,'a')" alt="">
                 </div>
-                <div class="question_b" onclick="clickQuestion(0,'b')">
-                    <img src="./img/4_b.png" alt="">
+                <div class="question_b" >
+                    <img src="./img/4_b.png" onclick="clickQuestion(0,'b')" alt="">
                 </div>
-                <div class="question_c" onclick="clickQuestion(0,'c')">
-                    <img src="./img/4_c.png" alt="">
+                <div class="question_c" >
+                    <img src="./img/4_c.png" onclick="clickQuestion(0,'c')" alt="">
                 </div>
-                <div class="question_d" onclick="clickQuestion(0,'d')">
-                    <img src="./img/4_d.png" alt="">
+                <div class="question_d" >
+                    <img src="./img/4_d.png" onclick="clickQuestion(0,'d')" alt="">
                 </div>
             </div>
         </div>
@@ -113,17 +108,17 @@
                 <div class="question">
                     <img src="./img/5_wenti.png" alt="">
                 </div>
-                <div class="question_a" onclick="clickQuestion(1,'a')">
-                    <img src="./img/5_a.png" alt="">
+                <div class="question_a">
+                    <img src="./img/5_a.png" onclick="clickQuestion(1,'a')" alt="">
                 </div>
-                <div class="question_b" onclick="clickQuestion(1,'b')">
-                    <img src="./img/5_b.png" alt="">
+                <div class="question_b">
+                    <img src="./img/5_b.png" onclick="clickQuestion(1,'b')" alt="">
                 </div>
-                <div class="question_c" onclick="clickQuestion(1,'c')">
-                    <img src="./img/5_c.png" alt="">
+                <div class="question_c">
+                    <img src="./img/5_c.png" onclick="clickQuestion(1,'c')" alt="">
                 </div>
-                <div class="question_d" onclick="clickQuestion(1,'d')">
-                    <img src="./img/5_d.png" alt="">
+                <div class="question_d">
+                    <img src="./img/5_d.png" onclick="clickQuestion(1,'d')" alt="">
                 </div>
             </div>
         </div>
@@ -134,17 +129,17 @@
                 <div class="question">
                     <img src="./img/6_wenti.png" alt="">
                 </div>
-                <div class="question_a" onclick="clickQuestion(2,'a')">
-                    <img src="./img/6_a.png" alt="">
+                <div class="question_a" >
+                    <img src="./img/6_a.png" onclick="clickQuestion(2,'a')" alt="">
                 </div>
-                <div class="question_b" onclick="clickQuestion(2,'b')">
-                    <img src="./img/6_b.png" alt="">
+                <div class="question_b" >
+                    <img src="./img/6_b.png" onclick="clickQuestion(2,'b')" alt="">
                 </div>
-                <div class="question_c" onclick="clickQuestion(2,'c')">
-                    <img src="./img/6_c.png" alt="">
+                <div class="question_c" >
+                    <img src="./img/6_c.png" onclick="clickQuestion(2,'c')" alt="">
                 </div>
-                <div class="question_d" onclick="clickQuestion(2,'d')">
-                    <img src="./img/6_d.png" alt="">
+                <div class="question_d" >
+                    <img src="./img/6_d.png" onclick="clickQuestion(2,'d')" alt="">
                 </div>
             </div>
         </div>
@@ -155,17 +150,17 @@
                 <div class="question">
                     <img src="./img/7_wenti.png" alt="">
                 </div>
-                <div class="question_a" onclick="clickQuestion(3,'a')">
-                    <img src="./img/7_a.png" alt="">
+                <div class="question_a" >
+                    <img src="./img/7_a.png" onclick="clickQuestion(3,'a')" alt="">
                 </div>
-                <div class="question_b" onclick="clickQuestion(3,'b')">
-                    <img src="./img/7_b.png" alt="">
+                <div class="question_b">
+                    <img src="./img/7_b.png"  onclick="clickQuestion(3,'b')" alt="">
                 </div>
-                <div class="question_c" onclick="clickQuestion(3,'c')">
-                    <img src="./img/7_c.png" alt="">
+                <div class="question_c">
+                    <img src="./img/7_c.png"  onclick="clickQuestion(3,'c')" alt="">
                 </div>
-                <div class="question_d" onclick="clickQuestion(3,'d')">
-                    <img src="./img/7_d.png" alt="">
+                <div class="question_d">
+                    <img src="./img/7_d.png"  onclick="clickQuestion(3,'d')" alt="">
                 </div>
             </div>
         </div>

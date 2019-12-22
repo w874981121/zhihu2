@@ -16,13 +16,13 @@ function canvasDrawImg(canl, bg, obj, name, callback) {
         // 设置字体
         ctx.font = "36px bold 黑体";
         // 设置颜色
-        ctx.fillStyle = "#000000";
+        ctx.fillStyle = "#db9e91";
         // 设置水平对齐方式
-        ctx.textAlign = "center";
+        ctx.textAlign = "left";
         // 设置垂直对齐方式
         ctx.textBaseline = "middle";
         // 绘制文字（参数：要写的字，x坐标，y坐标）
-        ctx.fillText(name, 178, 380);
+        ctx.fillText(name, 100, 380);
         const Qingwidth = 570,
             Qingheight = 120;
         let img_1 = new Image();

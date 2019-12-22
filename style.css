@@ -157,7 +157,7 @@
  /* 问题1 板块  page4*/
  .question_box {
      width: 80%;
-     margin: 1.2rem auto;
+     margin: 1rem auto;
  }
 
  .question_box img {
@@ -201,7 +201,7 @@
  /* 问题2 板块  page5*/
  .question_box2 {
      width: 80%;
-     margin: 1.2rem auto;
+     margin: 1rem auto;
      position: relative;
  }
 
@@ -243,7 +243,7 @@
 
  .question_box3 {
      width: 80%;
-     margin: 1.2rem auto;
+     margin: 1rem auto;
  }
 
  .question_box3 img {
@@ -287,7 +287,7 @@
  /* 问题4 板块 page7*/
  .question_box4 {
      width: 80%;
-     margin: 1.2rem auto;
+     margin: 1rem auto;
  }
 
  .question_box4 img {
@@ -335,7 +335,7 @@
  .box8 .wenzi {
      width: 85%;
      margin: 0 auto;
-     margin-top: 1.2rem;
+     margin-top: 1rem;
 
  }
 
@@ -402,13 +402,15 @@
  .box8 .qipao {
      width: 60%;
      margin-left: 1rem;
-     margin-top: 0.3rem;
+     margin-top: 0.1rem;
      position: relative;
+     z-index: 99;
  }
 
  .box8 .qipao img {
      width: 100%;
      display: block;
+     opacity: 0;
  }
 
 
