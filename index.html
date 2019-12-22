@@ -28,9 +28,24 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./animate.css">
     <script src="./zeptojs.min.js"></script>
-    <script async src="https://unpkg.zhihu.com/zhihu-hybrid@2.3.1"></script>
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-
+    <!-- <script async src="https://unpkg.zhihu.com/zhihu-hybrid@2.3.1"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script> -->
+    <script src="https://zhstatic.zhihu.com/zWechat/zWechat.9b83b2d673c0bdd49070.js"></script>
+    <script>
+        var shareInfo = {
+            title: '这是个测试', // 分享到朋友圈与微信好友时的标题
+            desc: '这是个测试', // 分享到微信好友的链接详情
+            imgUrl: 'https://zhstatic.zhihu.com/fly/duanzi/assets/images/share.jpg', // 分享到朋友圈与微信好友时的图片
+            link: location.href, // 分享的链接，可能会有增加追踪参数的需求
+            success: () => {
+                // 微信 JS SDK 提供的分享成功回调，可以进行打点的操作
+            }
+        }
+        window.zWechat.init().then(function () {
+            wx.onMenuShareTimeline(shareInfo) // 设置分享到朋友圈信息
+            wx.onMenuShareAppMessage(shareInfo) // 设置分享到微信好友信息，如有需要，两者可以不同
+        });
+    </script>
 </head>
 
 <body>
