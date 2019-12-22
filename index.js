@@ -1,8 +1,8 @@
 /*
-             mainClass      滑动父容器类名
-             firstClass  第一页的类名
-             num                  总页数
-        */
+mainClass      滑动父容器类名
+firstClass     第一页的类名
+num            总页数
+*/
 
 
 var passiveSupported = false;
@@ -116,3 +116,16 @@ const clickQuestion = function (num, loc) {
 function clickButton() {
     localStorage.setItem("NAME", $("#inputname").val());
 }
+
+
+// 动画控制台模块
+// 说明：在页面滑入时调用响应的动画模块即可
+
+// 页面1动画效果
+function page1_animate() {
+    $(".box1 .jiiantou img").toggleClass("animated fadeInUp infinite");
+    $(".box1 .jiiantou img").css({"animation-duration":"2s"});
+
+    // console.log ("ok");
+}
+
