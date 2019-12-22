@@ -16,6 +16,12 @@
      overflow: hidden;
  }
 
+
+ #myCanvas{
+     width: 3.75rem;
+     height: 9rem;
+ }
+
  /* 背景 */
 
 
