@@ -192,14 +192,9 @@ function clickSwitch(num) {
     }
 };
 
-// input 焦点绑定事件
+// input 焦点绑定事件，弹出气泡
 $("#inputname").focus(function () {
-    $(".box8 .qipao img").addClass("animated fadeIn");
-    $(".box8 .qipao img").css({
-        "animation-duration": "2s",
-        "-webkit-animation-delay": "0.5s",
-        "animation-delay": "0.5s"
-    });
+    $(".box8 .qipao img").addClass("animated bounceIn");
 });
 
 // 首页默认执行
