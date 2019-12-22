@@ -23,6 +23,17 @@
      display: none;
  }
 
+ .logo{
+     position: absolute;
+     width: 1rem;
+     top: 0.1rem;
+     right: 0.1rem;
+     z-index: 999;
+ }
+ .logo img{
+     width: 100%;
+     display: block;
+ }
 
  /* 背景 */
 
