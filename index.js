@@ -100,7 +100,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-fullPageJump.clickPage(7)
+// fullPageJump.clickPage(7)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
