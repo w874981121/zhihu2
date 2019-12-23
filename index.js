@@ -175,7 +175,7 @@ function seeShare() {
 // 说明：在页面滑入时调用响应的动画模块即可
 // 循环执行动画 infinite
 // 动画执行时长 "animation-duration":"2s"
-// 动画延时执行 "-webkit-animation-delay":"0.5s"   "animation-delay":"0.5s"
+// 动画延时执行 "-webkit-animation-delay":"0.5s","animation-delay":"0.5s"
 //
 function clickSwitch(num) {
 
@@ -228,16 +228,19 @@ function page1_animate() {
 }
 // 页面2动画效果
 function page2_animate() {
-    $(".box2 .text img").css({});
-    $(".box2 .jiiantou img").css({});
+    $(".box2 .w_1").addClass("animated fadeIn");
+    $(".box2 .w_1").css({"animation-duration": "2s","-webkit-animation-delay":"1s","animation-delay":"1s"})
+    $(".box2 .w_2").addClass("animated fadeIn");
+    $(".box2 .w_2").css({"animation-duration": "2s","-webkit-animation-delay":"2s","animation-delay":"2s"})
+    $(".box2 .w_3").addClass("animated fadeIn");
+    $(".box2 .w_3").css({"animation-duration": "2s","-webkit-animation-delay":"3s","animation-delay":"3s"})
+    $(".box2 .w_4").addClass("animated fadeIn");
+    $(".box2 .w_4").css({"animation-duration": "2s","-webkit-animation-delay":"4s","animation-delay":"4s"})
+    $(".box2 .w_5").addClass("animated fadeIn");
+    $(".box2 .w_5").css({"animation-duration": "2s","-webkit-animation-delay":"5s","animation-delay":"5s"})
+    $(".box2 .w_6").addClass("animated fadeIn");
+    $(".box2 .w_6").css({"animation-duration": "2s","-webkit-animation-delay":"6s","animation-delay":"6s"})
 
-
-    $(".box2 .text img").addClass("animated fadeIn");
-    $(".box2 .text img").css({
-        "animation-duration": "4s",
-        "-webkit-animation-delay": "0.5s",
-        "animation-delay": "0.5s"
-    });
     $(".box2 .jiiantou img").addClass("animated fadeInDown infinite");
     $(".box2 .jiiantou img").css({
         "animation-duration": "2s",
@@ -247,15 +250,23 @@ function page2_animate() {
 }
 // 页面3动画效果
 function page3_animate() {
-    $(".box3 .text img").css({});
-    $(".box3 .button img").css({});
+    $(".box3 .w_1").addClass("animated fadeIn");
+    $(".box3 .w_1").css({"animation-duration": "2s","-webkit-animation-delay":"1s","animation-delay":"1s"})
+    $(".box3 .w_2").addClass("animated fadeIn");
+    $(".box3 .w_2").css({"animation-duration": "2s","-webkit-animation-delay":"2s","animation-delay":"2s"})
+    $(".box3 .w_3").addClass("animated fadeIn");
+    $(".box3 .w_3").css({"animation-duration": "2s","-webkit-animation-delay":"3s","animation-delay":"3s"})
+    $(".box3 .w_4").addClass("animated fadeIn");
+    $(".box3 .w_4").css({"animation-duration": "2s","-webkit-animation-delay":"4s","animation-delay":"4s"})
+    $(".box3 .w_5").addClass("animated fadeIn");
+    $(".box3 .w_5").css({"animation-duration": "2s","-webkit-animation-delay":"5s","animation-delay":"5s"})
+    $(".box3 .w_6").addClass("animated fadeIn");
+    $(".box3 .w_6").css({"animation-duration": "2s","-webkit-animation-delay":"6s","animation-delay":"6s"})
+    $(".box3 .w_7").addClass("animated fadeIn");
+    $(".box3 .w_7").css({"animation-duration": "2s","-webkit-animation-delay":"7s","animation-delay":"7s"})
+    $(".box3 .w_8").addClass("animated fadeIn");
+    $(".box3 .w_8").css({"animation-duration": "2s","-webkit-animation-delay":"8s","animation-delay":"8s"})
 
-    $(".box3 .text img").addClass("animated fadeIn");
-    $(".box3 .text img").css({
-        "animation-duration": "4s",
-        "-webkit-animation-delay": "0.5s",
-        "animation-delay": "0.5s"
-    });
     $(".box3 .button img").addClass("animated fadeIn");
     $(".box3 .button img").css({
         "-webkit-animation-delay": "2s",
