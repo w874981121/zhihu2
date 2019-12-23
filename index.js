@@ -101,7 +101,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-fullPageJump.clickPage(8)
+// fullPageJump.clickPage(8)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -139,8 +139,6 @@ function clickButton() {
         countDown(5);
     })
 }
-
-countDown(5);
 
 function countDown(num) {
     setTimeout(() => {
