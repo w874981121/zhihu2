@@ -492,8 +492,9 @@
  }
 
  .box9 .loading span {
-     width: 0.04rem;
-     height: 0.04rem;
+     width: 0.08rem;
+     height: 0.08rem;
+     border-radius: 0.04rem;
      background: rgb(209, 150, 135);
      display: block;
  }
