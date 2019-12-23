@@ -12,6 +12,7 @@
         (function (doc, win) {
             var docEl = doc.documentElement, resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
                 recalc = function () {
+                    fullPageJump.fixMargin()
                     var clientWidth = docEl.clientWidth;
                     if (!clientWidth) return;
                     if (clientWidth >= 900) {
@@ -292,6 +293,26 @@
                 false
             );
         }
+
+        // function pushKey() {
+        //     let target = this;
+        //     setTimeout(function () {
+        //         target.scrollIntoViewIfNeeded(true);
+        //     }, 100);
+        //     if (/Android [4-8]/.test(navigator.appVersion)) {
+        //         window.addEventListener("resize", function () {
+        //             if (document.activeElement.tagName == "INPUT" || document.activeElement.tagName == "TEXTAREA") {
+        //                 window.setTimeout(function () {
+        //                     document.activeElement.scrollIntoViewIfNeeded();
+        //                 }, 100);
+        //             }
+        //         })
+        //     }
+        // }
+
+
+
+
     </script>
     <script src="./canvas.js"></script>
     <script src="./index.js"></script>
