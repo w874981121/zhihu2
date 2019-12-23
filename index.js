@@ -151,6 +151,7 @@ function clickButton() {
         shareInfoFn(nameText)
     })
 }
+// countDown(5)
 function countDown(num) {
     setTimeout(() => {
         num--
