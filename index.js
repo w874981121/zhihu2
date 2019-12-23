@@ -113,7 +113,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-// fullPageJump.clickPage(7)
+// fullPageJump.clickPage(8)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -151,20 +151,25 @@ function clickButton() {
         shareInfoFn(nameText)
     })
 }
-
 function countDown(num) {
     setTimeout(() => {
         num--
         if (num <= 0) {
             fullPageJump.clickPage(9);
         } else {
-            if (num <= 3) {
-                $(".loading").html(num)
-            } else if (num > 3) {
-                $(".loading").html("<span></span><span></span>")
-                setTimeout(() => {
+            switch (num) {
+                case 4:
+                    $(".loading").html("<span></span><span></span>")
+                    break;
+                case 3:
                     $(".loading").html("<span></span><span></span><span></span>")
-                }, 600);
+                    break;
+                case 2:
+                    $(".loading").html("<span></span>")
+                    break;
+                case 1:
+                    $(".loading").html("<span></span><span></span>")
+                    break;
             }
             countDown(num)
         }
