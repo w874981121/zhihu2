@@ -40,7 +40,13 @@ function canvasDrawImg(canl, bg, obj, name, callback) {
                 img_3.src = obj[2];
                 img_3.onload = function () {
                     ctx.drawImage(img_3, 90, 820, Qingwidth, Qingheight)
-                    drawImg()
+                    let img_logo = new Image();
+                    img_logo.setAttribute("crossOrigin", 'anonymous')
+                    img_logo.src = "./img/logo.png";
+                    img_logo.onload = function () {
+                        ctx.drawImage(img_logo, 20, 20, img_logo.width, img_logo.height)
+                        drawImg()
+                    }
                 }
             }
         }
@@ -87,7 +93,7 @@ function canvasDrawImg2(canl, bg, obj, name, callback) {
         img_1.setAttribute("crossOrigin", 'anonymous')
         img_1.src = obj[0];
         img_1.onload = function () {
-            ctx.drawImage(img_1, 2, 100 +topY, Qingwidth, Qingheight)
+            ctx.drawImage(img_1, 2, 100 + topY, Qingwidth, Qingheight)
             let img_2 = new Image();
             img_2.setAttribute("crossOrigin", 'anonymous')
             img_2.src = obj[1];
