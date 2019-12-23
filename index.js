@@ -3,8 +3,6 @@ mainClass      滑动父容器类名
 firstClass     第一页的类名
 num            总页数
 */
-
-
 var passiveSupported = false;
 try {
     var options = Object.defineProperty({}, "passive", {
@@ -19,10 +17,8 @@ var startX = 0, //初始横坐标
     startY = 0, //初始纵坐标
     touchFlag = true; //可滑动标志 true 可滑动，false 不可滑
 function fullPage(mainClass, firstClass, num, callback) {
-
     var marginTop = 0, //上下滑动变量
         touchNum = 0, //上滑极限，是否可以上滑
-        bodyHeight = document.body.offsetHeight,
         page = document.getElementsByClassName(mainClass)[0],
         pageFirst = document.getElementsByClassName(firstClass)[0];
     var fn1 = function (e) {
@@ -40,6 +36,7 @@ function fullPage(mainClass, firstClass, num, callback) {
         fn3 = function (e) {
             // e.preventDefault();
             var newX = e.targetTouches[0].clientX,
+                bodyHeight = document.body.offsetHeight,
                 newY = e.targetTouches[0].clientY;
 
             if (newY - startY > 50) {
@@ -73,12 +70,28 @@ function fullPage(mainClass, firstClass, num, callback) {
         passive: true
     } : false)
     return {
+        currentPage: 0,
         clickPage: (num) => {
+            this.currentPage = num
             var pageFirst = document.getElementsByClassName(firstClass)[0];
             clickSwitch(num)
             touchNum = num
             marginTop = -num
             pageFirst.style.marginTop = -num * document.body.offsetHeight + "px";
+        },
+        fixMargin: () => {
+            var pages = document.getElementsByClassName('page'),
+                pageTop = document.getElementsByClassName(firstClass)[0]
+            Array.prototype.forEach.call(pages, function (ele) {
+                // console.log(ele)
+                ele.style.transition = '0s'
+            })
+            pageTop.style.marginTop = -this.currentPage * document.body.offsetHeight + "px"
+            setTimeout(function () {
+                Array.prototype.forEach.call(pages, function (ele) {
+                    ele.style.transition = '0.5s ease-in'
+                })
+            }, 100)
         }
     }
 };
