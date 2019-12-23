@@ -51,6 +51,22 @@
      display: block;
  }
 
+ .showmsg {
+     display: none;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.8);
+     z-index: 99999999999;
+ }
+
+ .showmsg img {
+     width: 100%;
+     height: 100%;
+     display: block;
+ }
 
  /* 背景 */
 

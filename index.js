@@ -15,7 +15,6 @@ try {
     window.addEventListener("test", null, options);
 } catch (err) {}
 
-
 var startX = 0, //初始横坐标
     startY = 0, //初始纵坐标
     touchFlag = true; //可滑动标志 true 可滑动，false 不可滑
@@ -101,7 +100,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-// fullPageJump.clickPage(8)
+fullPageJump.clickPage(7)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -132,11 +131,11 @@ function clickButton() {
     canvasDrawImg("myCanvas", "./img/11_bg.jpg", obj, nameText, function (imgdata) {
         $("#bgBase64").attr("src", imgdata);
     })
-
     // 渲染背景图片
     canvasDrawImg2("myCanvas2", "./img/10_neirongqu.png", obj, nameText, function (data) {
         $("#bgBase64png").attr("src", data);
         countDown(5);
+        shareInfoFn(nameText)
     })
 }
 
@@ -166,7 +165,17 @@ function rePeek() {
 
 // 让它查看
 function seeShare() {
-    alert("分享")
+    let UA = navigator.userAgent;
+    let zhihuState = UA.indexOf("ZhihuHybrid") > -1;
+    if (zhihuState) {
+        window.zhihuHybrid && window.zhihuHybrid.dispatch("share/showShareActionSheet");
+    } else {
+        $("#assistan-share-info").attr("style", "display:block")
+    }
+}
+
+function guanbi() {
+    $("#assistan-share-info").attr("style", "display:none")
 }
 
 // 动画控制台模块
@@ -227,17 +236,41 @@ function page1_animate() {
 // 页面2动画效果
 function page2_animate() {
     $(".box2 .w_1").addClass("animated fadeIn");
-    $(".box2 .w_1").css({"animation-duration": "2s","-webkit-animation-delay":"1s","animation-delay":"1s"})
+    $(".box2 .w_1").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "1s",
+        "animation-delay": "1s"
+    })
     $(".box2 .w_2").addClass("animated fadeIn");
-    $(".box2 .w_2").css({"animation-duration": "2s","-webkit-animation-delay":"2s","animation-delay":"2s"})
+    $(".box2 .w_2").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "2s",
+        "animation-delay": "2s"
+    })
     $(".box2 .w_3").addClass("animated fadeIn");
-    $(".box2 .w_3").css({"animation-duration": "2s","-webkit-animation-delay":"3s","animation-delay":"3s"})
+    $(".box2 .w_3").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "3s",
+        "animation-delay": "3s"
+    })
     $(".box2 .w_4").addClass("animated fadeIn");
-    $(".box2 .w_4").css({"animation-duration": "2s","-webkit-animation-delay":"4s","animation-delay":"4s"})
+    $(".box2 .w_4").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "4s",
+        "animation-delay": "4s"
+    })
     $(".box2 .w_5").addClass("animated fadeIn");
-    $(".box2 .w_5").css({"animation-duration": "2s","-webkit-animation-delay":"5s","animation-delay":"5s"})
+    $(".box2 .w_5").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "5s",
+        "animation-delay": "5s"
+    })
     $(".box2 .w_6").addClass("animated fadeIn");
-    $(".box2 .w_6").css({"animation-duration": "2s","-webkit-animation-delay":"6s","animation-delay":"6s"})
+    $(".box2 .w_6").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "6s",
+        "animation-delay": "6s"
+    })
 
     $(".box2 .jiiantou img").addClass("animated fadeInDown infinite");
     $(".box2 .jiiantou img").css({
@@ -249,21 +282,53 @@ function page2_animate() {
 // 页面3动画效果
 function page3_animate() {
     $(".box3 .w_1").addClass("animated fadeIn");
-    $(".box3 .w_1").css({"animation-duration": "2s","-webkit-animation-delay":"1s","animation-delay":"1s"})
+    $(".box3 .w_1").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "1s",
+        "animation-delay": "1s"
+    })
     $(".box3 .w_2").addClass("animated fadeIn");
-    $(".box3 .w_2").css({"animation-duration": "2s","-webkit-animation-delay":"2s","animation-delay":"2s"})
+    $(".box3 .w_2").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "2s",
+        "animation-delay": "2s"
+    })
     $(".box3 .w_3").addClass("animated fadeIn");
-    $(".box3 .w_3").css({"animation-duration": "2s","-webkit-animation-delay":"3s","animation-delay":"3s"})
+    $(".box3 .w_3").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "3s",
+        "animation-delay": "3s"
+    })
     $(".box3 .w_4").addClass("animated fadeIn");
-    $(".box3 .w_4").css({"animation-duration": "2s","-webkit-animation-delay":"4s","animation-delay":"4s"})
+    $(".box3 .w_4").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "4s",
+        "animation-delay": "4s"
+    })
     $(".box3 .w_5").addClass("animated fadeIn");
-    $(".box3 .w_5").css({"animation-duration": "2s","-webkit-animation-delay":"5s","animation-delay":"5s"})
+    $(".box3 .w_5").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "5s",
+        "animation-delay": "5s"
+    })
     $(".box3 .w_6").addClass("animated fadeIn");
-    $(".box3 .w_6").css({"animation-duration": "2s","-webkit-animation-delay":"6s","animation-delay":"6s"})
+    $(".box3 .w_6").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "6s",
+        "animation-delay": "6s"
+    })
     $(".box3 .w_7").addClass("animated fadeIn");
-    $(".box3 .w_7").css({"animation-duration": "2s","-webkit-animation-delay":"7s","animation-delay":"7s"})
+    $(".box3 .w_7").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "7s",
+        "animation-delay": "7s"
+    })
     $(".box3 .w_8").addClass("animated fadeIn");
-    $(".box3 .w_8").css({"animation-duration": "2s","-webkit-animation-delay":"8s","animation-delay":"8s"})
+    $(".box3 .w_8").css({
+        "animation-duration": "2s",
+        "-webkit-animation-delay": "8s",
+        "animation-delay": "8s"
+    })
 
     $(".box3 .button img").addClass("animated fadeIn");
     $(".box3 .button img").css({
