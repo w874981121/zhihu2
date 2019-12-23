@@ -101,7 +101,7 @@ const fullPageJump = fullPage("active_page", "f-pageFirst", 10, function (val) {
 });
 
 // 默认开启第几行
-// fullPageJump.clickPage(3)
+fullPageJump.clickPage(8)
 
 // click问题记录
 const clickQuestion = function (num, loc) {
@@ -136,12 +136,30 @@ function clickButton() {
     // 渲染背景图片
     canvasDrawImg2("myCanvas2", "./img/10_neirongqu.png", obj, nameText, function (data) {
         $("#bgBase64png").attr("src", data);
-        setTimeout(() => {
-            fullPageJump.clickPage(9);
-        }, 2000)
+        countDown(5);
     })
 }
 
+countDown(5);
+
+function countDown(num) {
+    setTimeout(() => {
+        num--
+        if (num <= 0) {
+            fullPageJump.clickPage(9);
+        } else {
+            if (num <= 3) {
+                $(".loading").html(num)
+            } else if (num > 3) {
+                $(".loading").html("<span></span><span></span>")
+                setTimeout(() => {
+                    $(".loading").html("<span></span><span></span><span></span>")
+                }, 600);
+            }
+            countDown(num)
+        }
+    }, 1000)
+}
 
 // 重新偷看
 function rePeek() {

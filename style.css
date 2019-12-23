@@ -471,6 +471,8 @@
      margin-top: 0.2rem;
      display: flex;
      justify-content: space-around;
+     font-size: 0.16rem;
+     color: #db9e91;
  }
 
  .box9 .loading span {

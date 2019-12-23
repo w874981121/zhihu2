@@ -248,8 +248,6 @@
             </div>
             <div class="loading">
                 <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
         <div class="page box10">
@@ -279,13 +277,17 @@
     <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./music.mp3" loop="loop"></audio>
     <script>
         // ios 键盘弹起兼容
-        document.getElementById('inputname').addEventListener(
-            'blur',
-            function () {
-                window.scrollTo(0, 0) //页面滚动到顶部
-            },
-            false
-        );
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isiOS) {
+            document.getElementById('inputname').addEventListener(
+                'blur',
+                function () {
+                    window.scrollTo(0, 0) //页面滚动到顶部
+                },
+                false
+            );
+        }
     </script>
     <script src="./canvas.js"></script>
     <script src="./index.js"></script>
