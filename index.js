@@ -131,7 +131,7 @@ function clickButton() {
     if (!nameText) {
         return alert("请输入名字")
     }
-    nameText = nameText  + "：你好呀";
+    nameText = nameText + "：你好呀";
     fullPageJump.clickPage(8);
     let RECORD = JSON.parse(localStorage.getItem("RECORD"));
     let obj = [];
