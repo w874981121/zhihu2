@@ -32,7 +32,22 @@
      opacity: 0.9;
  }
 
+
  .logo img {
+    width: 100%;
+    display: block;
+}
+
+ .logo_right {
+    position: absolute;
+    width: 1rem;
+    top: 0.1rem;
+    right: 0.5rem;
+    z-index: 999;
+    opacity: 0.9;
+}
+
+ .logo_right img {
      width: 100%;
      display: block;
  }

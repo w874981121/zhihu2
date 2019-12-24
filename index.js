@@ -337,23 +337,23 @@ function page3_animate() {
         "-webkit-animation-delay": "6s",
         "animation-delay": "6s"
     })
-    $(".box3 .w_7").addClass("animated fadeIn");
-    $(".box3 .w_7").css({
+    // $(".box3 .w_7").addClass("animated fadeIn");
+    // $(".box3 .w_7").css({
+    //     "animation-duration": "2s",
+    //     "-webkit-animation-delay": "7s",
+    //     "animation-delay": "7s"
+    // })
+    $(".box3 .w_8").addClass("animated fadeIn");
+    $(".box3 .w_8").css({
         "animation-duration": "2s",
         "-webkit-animation-delay": "7s",
         "animation-delay": "7s"
     })
-    $(".box3 .w_8").addClass("animated fadeIn");
-    $(".box3 .w_8").css({
-        "animation-duration": "2s",
-        "-webkit-animation-delay": "8s",
-        "animation-delay": "8s"
-    })
 
     $(".box3 .button img").addClass("animated fadeIn");
     $(".box3 .button img").css({
-        "-webkit-animation-delay": "2s",
-        "animation-delay": "2s"
+        "-webkit-animation-delay": "8s",
+        "animation-delay": "8s"
     });
 }
 // 页面4动画效果
