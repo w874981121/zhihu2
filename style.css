@@ -32,13 +32,7 @@
      opacity: 0.9;
  }
 
-
- .logo img {
-    width: 100%;
-    display: block;
-}
-
- .logo_right {
+ .logo_1 {
     position: absolute;
     width: 1rem;
     top: 0.1rem;
@@ -47,10 +41,14 @@
     opacity: 0.9;
 }
 
- .logo_right img {
-     width: 100%;
-     display: block;
- }
+ .logo img {
+    width: 100%;
+    display: block;
+}
+ .logo_1 img {
+    width: 100%;
+    display: block;
+}
 
  .audio_img {
      position: absolute;
@@ -543,7 +541,7 @@
  }
 
  .content_10 .content .wenzi {
-     width: 60%;
+     width: 70%;
      margin: 0.1rem auto;
  }
 
