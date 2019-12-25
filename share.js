@@ -17,13 +17,17 @@ function shareInfoFn(name) {
         title: `2020 年的 ${name} 请你一定要…… ／ Hi， 2020 年的 ${name}`,
         desc: '新年到来前， 偷偷看一眼 2020 的你',
     }];
+
     // 获取随机数
     var sharerand = Math.floor(Math.random() * arrayShare.length);
+    if (sharerand == 4) {
+        sharerand = 0
+    }
     var datashare = arrayShare[sharerand];
     var shareInfo = {
         title: datashare.title, // 分享到朋友圈与微信好友时的标题
         desc: datashare.desc, // 分享到微信好友的链接详情
-        imgUrl: 'https://zhstatic.zhihu.com/fly/duanzi/assets/images/share.jpg', // 分享到朋友圈与微信好友时的图片
+        imgUrl: "./img/icon.pic.jpg", // 分享到朋友圈与微信好友时的图片
         link: location.href, // 分享的链接，可能会有增加追踪参数的需求
         success: () => {
             // 微信 JS SDK 提供的分享成功回调，可以进行打点的操作
@@ -46,36 +50,36 @@ function shareInfoFn(name) {
                 wechatTimeline: {
                     link: shareurl,
                     title: datashare.title,
-                    imgUrl: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg"
+                    imgUrl: "./img/icon.pic.jpg"
                 },
                 wechatMessage: {
                     link: shareurl,
                     title: datashare.title,
-                    imgUrl: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg",
+                    imgUrl: "./img/icon.pic.jpg",
                     desc: datashare.desc,
                 },
                 QQ: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg"
+                    imageURL: "./img/icon.pic.jpg"
                 },
                 zone: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg"
+                    imageURL: "./img/icon.pic.jpg"
                 },
                 weibo: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg"
+                    imageURL: "./img/icon.pic.jpg"
                 },
                 pin: {
                     url: shareurl,
                     content: datashare.desc,
-                    imageURL: "https://pic2.zhimg.com/v2-f435c2d8cbd2dc3b4dc7a13aef9736f5.jpeg"
+                    imageURL: "./img/icon.pic.jpg"
                 },
                 copyLink: {
                     content: shareurl

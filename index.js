@@ -126,8 +126,33 @@ const clickQuestion = function (num, loc) {
     statePage(Number(num) + 4)
 };
 
+
+// 过滤敏感词  true 为输入存在关键词
+function forbiddenStr(str) {
+    var re = '';
+    for (var i = 0; i < Sensitive.length; i++) {
+        if (i == Sensitive.length - 1)
+            re += Sensitive[i];
+        else
+            re += Sensitive[i] + "|";
+    }
+    var pattern = new RegExp(re, "g");
+    if (pattern.test(str)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function clickButton() {
     let nameText = $("#inputname").val()
+    if (forbiddenStr(nameText.split(" ").join(""))) {
+        // 存在敏感词会执行这里
+        $("#inputname").val("")
+        $("#alert_remind").attr("style", "display:block")
+        return
+    }
+
     if (!nameText) {
         return alert("请输入名字")
     }
@@ -152,6 +177,11 @@ function clickButton() {
         shareInfoFn(nameText)
     })
 }
+
+// 入场初始化
+shareInfoFn("你");
+
+
 // countDown(5)
 function countDown(num) {
     setTimeout(() => {
@@ -196,6 +226,10 @@ function seeShare() {
 
 function guanbi() {
     $("#assistan-share-info").attr("style", "display:none")
+}
+
+function closeAlert() {
+    $("#alert_remind").attr("style", "display:none")
 }
 
 // 动画控制台模块

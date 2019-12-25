@@ -33,22 +33,23 @@
  }
 
  .logo_1 {
-    position: absolute;
-    width: 1rem;
-    top: 0.1rem;
-    right: 0.5rem;
-    z-index: 999;
-    opacity: 0.9;
-}
+     position: absolute;
+     width: 1rem;
+     top: 0.1rem;
+     right: 0.5rem;
+     z-index: 999;
+     opacity: 0.9;
+ }
 
  .logo img {
-    width: 100%;
-    display: block;
-}
+     width: 100%;
+     display: block;
+ }
+
  .logo_1 img {
-    width: 100%;
-    display: block;
-}
+     width: 100%;
+     display: block;
+ }
 
  .audio_img {
      position: absolute;
@@ -72,13 +73,44 @@
      top: 0;
      left: 0;
      background: rgba(0, 0, 0, 0.8);
-     z-index: 99999999999;
+     z-index: 99999;
  }
 
  .showmsg img {
      width: 100%;
      height: 100%;
      display: block;
+ }
+
+ .alert_remind {
+     display: none;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     z-index: 99999;
+     background: rgba(0, 0, 0, 0.8);
+ }
+
+ .alert_remind .alertbox {
+     width: 80%;
+     position: absolute;
+     top: 30%;
+     left: 10%;
+ }
+
+ .alert_remind img {
+     width: 100%;
+     display: block;
+ }
+
+ .alert_remind span {
+     display: block;
+     width: 0.3rem;
+     position: absolute;
+     top: -0.1rem;
+     right: -0.1rem;
  }
 
  /* 背景 */
