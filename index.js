@@ -523,6 +523,4 @@ function page10_animate() {
 
 }
 
-setTimeout(() => {
-    shareInfoFn("你");
-}, 2000)
+shareInfoFn("你");
