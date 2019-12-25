@@ -29,7 +29,7 @@ function shareInfoFn(name) {
     var shareInfo = {
         title: datashare.title, // 分享到朋友圈与微信好友时的标题
         desc: datashare.desc, // 分享到微信好友的链接详情
-        imgUrl: "./img/icon.pic.jpg", // 分享到朋友圈与微信好友时的图片
+        imgUrl: "https://event.zhihu.com/forward2020/img/icon.pic.jpg", // 分享到朋友圈与微信好友时的图片
         link: location.href, // 分享的链接，可能会有增加追踪参数的需求
         success: () => {
             // 微信 JS SDK 提供的分享成功回调，可以进行打点的操作
@@ -52,36 +52,36 @@ function shareInfoFn(name) {
                 wechatTimeline: {
                     link: shareurl,
                     title: datashare.title,
-                    imgUrl: "./img/icon.pic.jpg"
+                    imgUrl: "https://event.zhihu.com/forward2020/img/icon.pic.jpg"
                 },
                 wechatMessage: {
                     link: shareurl,
                     title: datashare.title,
-                    imgUrl: "./img/icon.pic.jpg",
+                    imgUrl: "https://event.zhihu.com/forward2020/img/icon.pic.jpg",
                     desc: datashare.desc,
                 },
                 QQ: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "./img/icon.pic.jpg"
+                    imageURL: "https://event.zhihu.com/forward2020/img/icon.pic.jpg"
                 },
                 zone: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "./img/icon.pic.jpg"
+                    imageURL: "https://event.zhihu.com/forward2020/img/icon.pic.jpg"
                 },
                 weibo: {
                     url: shareurl,
                     title: datashare.title,
                     content: datashare.desc,
-                    imageURL: "./img/icon.pic.jpg"
+                    imageURL: "https://event.zhihu.com/forward2020/img/icon.pic.jpg"
                 },
                 pin: {
                     url: shareurl,
                     content: datashare.desc,
-                    imageURL: "./img/icon.pic.jpg"
+                    imageURL: "https://event.zhihu.com/forward2020/img/icon.pic.jpg"
                 },
                 copyLink: {
                     content: shareurl
