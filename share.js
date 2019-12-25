@@ -23,7 +23,7 @@ function shareInfoFn(name) {
     if (sharerand == 4) {
         sharerand = 0
     }
-
+    
     var datashare = arrayShare[sharerand];
     var shareInfo = {
         title: datashare.title, // 分享到朋友圈与微信好友时的标题
