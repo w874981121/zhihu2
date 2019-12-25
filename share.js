@@ -23,9 +23,8 @@ function shareInfoFn(name) {
     if (sharerand == 4) {
         sharerand = 0
     }
-    
+
     var datashare = arrayShare[sharerand];
-    debugger
     var shareInfo = {
         title: datashare.title, // 分享到朋友圈与微信好友时的标题
         desc: datashare.desc, // 分享到微信好友的链接详情
@@ -90,6 +89,3 @@ function shareInfoFn(name) {
     }
 
 }
-
-// 入场初始化
-shareInfoFn("你");

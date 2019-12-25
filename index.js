@@ -3,6 +3,7 @@ mainClass      滑动父容器类名
 firstClass     第一页的类名
 num            总页数
 */
+
 var passiveSupported = false;
 try {
     var options = Object.defineProperty({}, "passive", {
@@ -143,6 +144,7 @@ function forbiddenStr(str) {
         return false;
     }
 }
+
 
 function clickButton() {
     let nameText = $("#inputname").val()
@@ -520,3 +522,7 @@ function page9_animate() {
 function page10_animate() {
 
 }
+
+setTimeout(() => {
+    shareInfoFn("你");
+}, 2000)
