@@ -178,10 +178,6 @@ function clickButton() {
     })
 }
 
-// 入场初始化
-shareInfoFn("你");
-
-
 // countDown(5)
 function countDown(num) {
     setTimeout(() => {

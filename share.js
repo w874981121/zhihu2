@@ -88,3 +88,6 @@ function shareInfoFn(name) {
     }
 
 }
+
+// 入场初始化
+shareInfoFn("你");
